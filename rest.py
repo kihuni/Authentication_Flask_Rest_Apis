@@ -13,5 +13,14 @@ auth = HTTPBasicAuth() # Creating a new instance AUTH from HTTPBasicAuth
 def get_response():
     return jsonify('You are authorised to see this message')
 
+@auth.verify_password # Decorator "used to register a function that verifies username and password"
+def authenticate(username, password):
+    if username and password:
+        if username == 'name' and password == "password":
+            return True
+        else:
+            return False
+        return False
+
 if __name__ == "__main__":
     app.run()
