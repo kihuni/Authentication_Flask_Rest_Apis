@@ -1,4 +1,3 @@
-from flask import Flask
 from flask import Flask, jsonify
 from flask_httpauth import HTTPBasicAuth
 
