@@ -1,5 +1,5 @@
 from flask import Flask
-from json import jsonify
+from flask import Flask, jsonify
 from flask_httpauth import HTTPBasicAuth
 
 app = Flask(__name__) # Creating a flask application
